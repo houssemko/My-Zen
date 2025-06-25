@@ -1,0 +1,93 @@
+/*/ BOOKMARK THEMEING FIXED /*/
+:root[zen-single-toolbar="true"] {
+  #TabsToolbar-customization-target {
+    margin-top: 60px !important;
+    scrollbar-width: none !important;
+  }
+
+  #personal-bookmarks {
+    display: flex !important;
+    justify-content: center !important;     /* Center horizontally */
+    align-items: center !important;         /* Center vertically */
+    width: 100% !important;                 /* Full width to allow centering */
+    overflow: hidden !important;            /* Hide overflow */
+    position: relative !important;
+    background: transparent !important;
+    z-index: 100 !important;
+  }
+
+  #personal-bookmarks:hover {
+    background: transparent !important;
+  }
+
+  #PlacesToolbar {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;     /* Center bookmarks */
+    align-items: center !important;
+    overflow: hidden !important;
+  }
+
+  #PlacesToolbarItems {
+    display: flex !important;
+    justify-content: center !important;     /* Force bookmarks to center */
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+    width: auto !important;
+    margin: 0 auto !important;
+  }
+
+  .bookmark-item {
+    visibility: visible !important;
+    flex-shrink: 0 !important;
+  }
+
+  .bookmark-item:not(:hover):is(toolbarbutton) {
+    margin-left: -3px !important;
+    margin-right: -3px !important;
+    transition: all 600ms ease-in-out;
+  }
+
+  .bookmark-item:hover:is(toolbarbutton) {
+    background: transparent !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    transform: scale(1.5);
+    transition: all 300ms ease-in-out;
+  }
+
+  .bookmark-item:not(:hover) .toolbarbutton-icon {
+    filter: grayscale(50%);
+    opacity: 0.7;
+  }
+
+  .bookmark-item:hover .toolbarbutton-icon {
+    filter: grayscale(0%);
+  }
+
+  #personal-bookmarks .bookmark-item .toolbarbutton-icon {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    width: 16px !important;
+    height: 16px !important;
+    filter: none !important;
+  }
+
+  #PlacesChevron,
+  #nav-bar-overflow-button {
+    visibility: collapse !important;
+    display: none !important;
+  }
+
+  #personal-bookmarks .bookmark-item > .toolbarbutton-text {
+    display: none !important;
+  }
+
+  /* Uncomment for text on hover */
+  /*
+  #personal-bookmarks .bookmark-item:hover > .toolbarbutton-text {
+    display: block !important;
+  }
+  */
+}
